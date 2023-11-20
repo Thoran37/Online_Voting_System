@@ -1,0 +1,5 @@
+Candidates(cid, cname, position)
+Voters(vid, vname, age, address, phone, email)
+Casts(voteid, vid, cid)
+
+// voteid is like transaction_id
