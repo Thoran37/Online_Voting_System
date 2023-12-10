@@ -1,4 +1,3 @@
 Candidates(cid, cname, position)
-Voters(vid, vname, age, address, phone, email, status)
+Voters(vid, vname, club, stch, status)
 Casts(cid, vid)
-
