@@ -19,7 +19,7 @@ class MyFrame extends JFrame {
     c.add(title);
   }
 }
-public class Main {
+public class Register2 {
   public static void main(String[] args) throws Exception {
     MyFrame f = new MyFrame();
   }
