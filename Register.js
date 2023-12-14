@@ -30,11 +30,11 @@ function Register() {
     <div className="container-fluid">
       <form onSubmit={handleSubmit(handle)} className="d-grid">
         <h1 className="text-primary-emphasis text-center mx-auto text-decoration-underline mb-3">
-          Registration Form
+        Event Registration Form
         </h1>
         <div className="row">
           <div className="col-6">
-            <label className="form-label">First Name</label>
+            <label className="form-label">Event Name</label>
             <input
               type="text"
               className="form-control w-75"
@@ -45,7 +45,7 @@ function Register() {
             )}
           </div>
           <div className="col-6">
-            <label className="form-label">Last Name</label>
+            <label className="form-label">Faculty Coordinator 1</label>
             <input
               type="text"
               className="form-control w-75"
@@ -56,7 +56,26 @@ function Register() {
             )}
           </div>
           <div className="col-6">
-            <label className="form-label">Phone number</label>
+            <label className="form-label">Faculty Coordinator 2</label>
+            <input
+              type="text"
+              className="form-control w-75"
+              {...register("lastname", { required: false })}
+            />
+          </div>
+          <div className="col-6">
+            <label className="form-label">Student Coordinator 1</label>
+            <input
+              type="text"
+              className="form-control w-75"
+              {...register("lastname", { required: true })}
+            />
+            {errors.lastname?.type === "required" && (
+              <p className="text-danger">Required</p>
+            )}
+          </div>
+          <div className="col-6">
+            <label className="form-label">Student Coordinator 1 Phone number</label>
             <input
               type="text"
               className="form-control w-75"
@@ -67,7 +86,23 @@ function Register() {
             )}
           </div>
           <div className="col-6">
-            <label className="form-label">Email</label>
+            <label className="form-label">Student Coordinator 2</label>
+            <input
+              type="text"
+              className="form-control w-75"
+              {...register("lastname", { required: false })}
+            />
+          </div>
+          <div className="col-6">
+            <label className="form-label">Student Coordinator 2 Phone number</label>
+            <input
+              type="text"
+              className="form-control w-75"
+              {...register("phone", { required: false })}
+            />
+          </div>
+          <div className="col-6">
+            <label className="form-label">Start date</label>
             <input
               type="email"
               className="form-control w-75"
@@ -78,6 +113,60 @@ function Register() {
             )}
           </div>
           <div className="col-6">
+            <label className="form-label">End date</label>
+            <input
+              type="email"
+              className="form-control w-75"
+              {...register("email", { required: false })}
+            />
+          </div>
+          <div className="col-6">
+            <label className="form-label">Time</label>
+            <input
+              type="email"
+              className="form-control w-75"
+              {...register("email", { required: true })}
+            />
+            {errors.email?.type === "required" && (
+              <p className="text-danger">Required</p>
+            )}
+          </div>
+          <div className="col-6">
+            <label className="form-label">Handles</label>
+            <input
+              type="email"
+              className="form-control w-75"
+              {...register("email", { required: false })}
+            />
+          </div>
+          <div className="col-6">
+            <label className="form-label">Registration Link</label>
+            <input
+              type="email"
+              className="form-control w-75"
+              {...register("email", { required: false })}
+            />
+          </div>
+          <div className="col-6">
+            <label className="form-label">Team Size</label>
+            <input
+              type="email"
+              className="form-control w-75"
+              {...register("email", { required: false })}
+            />
+          </div>
+          <div className="col-6">
+            <label className="form-label">Image Link</label>
+            <input
+              type="email"
+              className="form-control w-75"
+              {...register("email", { required: true })}
+            />
+            {errors.email?.type === "required" && (
+              <p className="text-danger">Required</p>
+            )}
+          </div>
+          {/* <div className="col-6">
             <label className="form-label">New Password</label>
             <input
               type="password"
@@ -87,38 +176,8 @@ function Register() {
             {errors.password?.type === "required" && (
               <p className="text-danger">Required</p>
             )}
+          </div> */}
           </div>
-          <div className="col-6">
-            <label className="form-label">Username</label>
-            <input
-              type="text"
-              className="form-control w-75"
-              {...register("username", { required: true })}
-            />
-            {errors.username?.type === "required" && (
-              <p className="text-danger">Required</p>
-            )}
-          </div>
-          <div className="col-6">
-            <label className="form-label">Re-enter Password</label>
-            <input
-              type="password"
-              className="form-control w-75"
-              {...register("password1", {
-                required: true,
-                pattern: "password",
-              })}
-            />
-            {errors.password1?.type === "required" && (
-              <p className="text-danger">Required</p>
-            )}
-          </div>
-          <div className="col-12">
-            <button className="btn btn-primary d-block mx-auto m-4">
-              Register
-            </button>
-          </div>
-        </div>
       </form>
     </div>
   );
